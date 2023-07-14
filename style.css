@@ -405,6 +405,57 @@ header ul {
   /* background: #0A192F; */
 }
 
+
+.formouter{
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.messageform{
+  min-width: 80%;
+}
+
+.messageform input, .messageform textarea{
+  background: transparent;
+  outline: none;
+  color: white;
+}
+.messageform input{
+  border:none;
+  border-bottom: 1px solid rgba(250, 128, 114, 0.381);
+  width: 75%;
+}
+.messageform textarea{
+  border: 1px solid rgba(250, 128, 114, 0.381);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.submitbtncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.submitbtn{
+  width: 5rem;
+  height: 2rem;
+  color: white;
+  background: #FD8E8E;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.chat-btn{
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 100;
+  cursor: pointer;
+}
 @media screen and (min-width: 667px) {
   .pfp {
     position: fixed;
@@ -496,6 +547,13 @@ header ul {
     font-size: 0.9rem;
     width: 100%;
     /* padding: 0 1rem; */
+  }
+
+  #clients-reviews-article{
+    min-width: 100%;
+  }
+  .contact-sec-para{
+    min-width: 100%;
   }
 }
 

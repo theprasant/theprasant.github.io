@@ -83,6 +83,13 @@ let clientsReviews = [
     review: 'Prasant is a brilliant discord bot creator. He goes above and beyond creating bots that not only do what you want but often do more than you imagine. I would not hesitate to work with him again for anything. He knows what he is doing and figures out new things when needed.'
   },
   {
+    name: 'tr0n9h',
+    pfp: null,
+    country: 'United States',
+    type: 'Individual',
+    review: 'This developer is hands down the best one I have worked with on Fiverr and know how to code project exactly to my spec. He is extremely good at what he does and not one task I asked him that he can\'t do. I always find myself coming back to him to get all my projects done. When he is busy, I book my projects with other developer and always come out disappointed and always end up coming back to decodeprasant to fixed their low quality work. I have probably worked with a dozens other developer on here and will no longer let anyone else do my projects but decodeprasant. I am willing to wait for this guy to do all my projects instead of outsourcing to someone else! He is just that good!'
+  },
+  {
     name: 'mross2196',
     pfp: null,
     type: 'Individual',
@@ -135,3 +142,7 @@ clientsReviews.forEach((cr) => {
   `;
   clientsReviewsArticle.innerHTML += clientReviewEl;
 });
+
+const showForm = () => {
+  
+}
