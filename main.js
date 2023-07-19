@@ -5,6 +5,8 @@ const aboutSecContainerEl = document.querySelector('.about-sec-content');
 const clientsReviewsArticle = document.getElementById('clients-reviews-article');
 // const sec1 = document.querySelector('.sec-1');
 const sectionEls = document.querySelectorAll('.section');
+const chatContainer = document.getElementById("chats-container");
+const chatBtn = document.getElementById("chat-btn");
 
 AOS.init();
 
@@ -143,6 +145,41 @@ clientsReviews.forEach((cr) => {
   clientsReviewsArticle.innerHTML += clientReviewEl;
 });
 
-const showForm = () => {
-  
+const showForm = (str) => {
+  console.log("height: ", chatContainer.style.height);
+  if (str == "open") {
+    chatContainer.style.height = "50vh";
+    chatContainer.style.border = "1px solid #7FC1E3";
+    chatBtn.style.display = "none";
+    return;
+  }
+  if (str == "close") {
+    chatContainer.style.height = "0px";
+    chatContainer.style.border = "none";
+    chatBtn.style.display = "block";
+    return;
+  }
+
+  if (chatContainer.style.height == "0px" || chatContainer.style.height == 0) {
+    chatContainer.style.height = "50vh";
+    chatContainer.style.border = "1px solid #7FC1E3";
+    chatBtn.style.display = "none";
+  } else {
+    chatContainer.style.height = "0px";
+    chatContainer.style.border = "none";
+    chatBtn.style.display = "block";
+  }
 }
+
+chatBtn.addEventListener("click", () => {
+  console.log("sho form inside chatBtn event")
+  showForm();
+})
+
+window.addEventListener("click", (e) => {
+  console.log(e.target.id)
+  if (!chatContainer.contains(e.target) && e.target.id != "chat-btn") {
+    console.log("showForm inside windiow event")
+    showForm("close");
+  }
+})

@@ -406,7 +406,7 @@ header ul {
 }
 
 
-.formouter{
+/* .formouter{
   min-width: 100%;
   display: flex;
   justify-content: center;
@@ -415,9 +415,9 @@ header ul {
 
 .messageform{
   min-width: 80%;
-}
+} */
 
-.messageform input, .messageform textarea{
+/* .messageform input, .messageform textarea{
   background: transparent;
   outline: none;
   color: white;
@@ -447,7 +447,7 @@ header ul {
   background: #FD8E8E;
   font-size: 1.1em;
   border-radius: 5px;
-}
+} */
 
 .chat-btn{
   position: fixed;
@@ -456,6 +456,26 @@ header ul {
   z-index: 100;
   cursor: pointer;
 }
+
+.chats-container{
+  width: 18rem;
+  height: 50vh;
+  background: #1c2128;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 100;
+  border-radius: 5px;
+  /* border: 1px solid #7FC1E3; */
+}
+
+#chats-container{
+  /* display: none; */
+  height: 0px;
+  border: none;
+  transition: height 0.1s ease-in-out;
+}
+
 @media screen and (min-width: 667px) {
   .pfp {
     position: fixed;

@@ -51,7 +51,7 @@
                 class="instagram-contact-text">Instagram</span></a>
           </div>
           <p style="text-align: center;">or</p>
-          Send a message <a href="#" class="nolink here-msg">here</a>
+          Send a message <a href="javascript:showForm('open');" class="nolink here-msg">here</a>
         </div>
       </div>
 
@@ -229,7 +229,7 @@
             <section class="sec-section contact-sec-para">
               If you have any questions or just want to say hello, please don't hesitate to get in touch! You can reach
               me via
-              email, <a href="javascript:void" class="nolink">use the chatbox</a>, or connect with me on any of the
+              email, <a href="javascript:showForm('open');" class="nolink">use the chatbox</a>, or connect with me on any of the
               following platforms.
             </section>
           </article>
@@ -327,7 +327,13 @@
 
   </main>
 
-  <img src="./chat.svg" alt="" class="chat-btn">
+  <!-- <div class="chats-container-outer"> -->
+    <div class="chats-container" id="chats-container">
+      
+    </div>
+  <!-- </div> -->
+
+  <img src="./chat.svg" alt="" class="chat-btn" id="chat-btn">
 
   <!-- <div id="formouter">
     <form action="">
