@@ -21,6 +21,10 @@
   background: #555;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   background: #020C1B;
