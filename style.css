@@ -455,11 +455,11 @@ header ul {
   right: 20px;
   z-index: 100;
   cursor: pointer;
+  /* display: none !important; */
 }
 
 .chats-container{
   width: 18rem;
-  height: 50vh;
   background: #1c2128;
   position: fixed;
   bottom: 30px;
@@ -467,14 +467,51 @@ header ul {
   z-index: 100;
   border-radius: 5px;
   /* border: 1px solid #7FC1E3; */
-}
-
-#chats-container{
-  /* display: none; */
   height: 0px;
   border: none;
+  /* height: 50vh !important; */
+  /* border: 1px solid #7FC1E3 !important; */
   transition: height 0.1s ease-in-out;
+  color: rgba(255, 255, 255, 0.627);
+  overflow: hidden;
 }
+
+
+.chats-header{
+  padding: 0.5em;
+  border-bottom: 1px solid #7FC1E3;
+  font-size: 1.2rem;
+  height: 1.5rem;
+}
+
+.messages-container{
+  overflow-y: scroll;
+  height: calc(50vh - 3rem);
+}
+
+.message{
+  padding: 0.5rem;
+  width: 70%;
+  border: 1px solid #7FC1E3;
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+.message-me{
+  float: right;
+  /* border: 1px solid #7FC1E3; */
+  background: #7fc2e31c;
+}
+.message-not-me{
+  float: left;
+  /* border: 1px solid #FD8E8E; */
+  /* background: #fd8e8e15; */
+}
+
+.message-text{
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.885);
+}
+
 
 @media screen and (min-width: 667px) {
   .pfp {
