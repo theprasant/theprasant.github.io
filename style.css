@@ -488,20 +488,20 @@ header ul {
 
 .chats-header {
   padding: 0.5em;
-  border-bottom: 1px solid #7FC1E3;
+  border-bottom: 1px solid #14171d;
   font-size: 1.2rem;
   height: 1.5rem;
 }
 
 .messages-container {
   overflow-y: scroll;
-  height: calc(50vh - 3rem);
+  height: calc(50vh - 5rem);
 }
 
 .message {
   padding: 0.5rem;
   width: 70%;
-  border: 1px solid #7FC1E3;
+  /* border: 1px solid #7FC1E3; */
   border-radius: 5px;
   margin: 0.5rem;
 }
@@ -514,6 +514,7 @@ header ul {
 
 .message-not-me {
   float: left;
+  background: #0f121662;
   /* border: 1px solid #FD8E8E; */
   /* background: #fd8e8e15; */
 }
@@ -523,6 +524,40 @@ header ul {
   color: rgba(255, 255, 255, 0.885);
 }
 
+.chat-input-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f121662;
+  /* padding: 0.5rem; */
+  border-top: 1px solid #14171d;;
+}
+
+#send-msg-textarea {
+  width: 80%;
+  height: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #0f121662;
+  color: rgba(255, 255, 255, 0.885);
+  padding: 0.5rem;
+  resize: none;
+  font-family: 'Poppins', sans-serif;
+  color: #ccd6f6;
+}
+
+#send-btn{
+  width: 2rem;
+  height: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #0f121662;
+  color: rgba(255, 255, 255, 0.885);
+  padding: 0.5rem;
+  cursor: pointer;
+}
 
 @media screen and (min-width: 667px) {
   .pfp {

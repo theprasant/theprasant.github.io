@@ -6,7 +6,10 @@ const clientsReviewsArticle = document.getElementById('clients-reviews-article')
 // const sec1 = document.querySelector('.sec-1');
 const sectionEls = document.querySelectorAll('.section');
 const chatContainer = document.getElementById("chats-container");
+const messagesContainer = document.getElementById("messages-container");
 const chatBtn = document.getElementById("chat-btn");
+const sendBtn = document.getElementById("send-btn");
+const sendMsgTxtArea = document.getElementById("send-msg-textarea");
 
 AOS.init();
 
@@ -149,7 +152,7 @@ const showForm = (str) => {
   console.log("height: ", chatContainer.style.height);
   if (str == "open") {
     chatContainer.style.height = "50vh";
-    chatContainer.style.border = "1px solid #7FC1E3";
+    // chatContainer.style.border = "1px solid #7FC1E3";
     chatBtn.style.display = "none";
     return;
   }
@@ -162,7 +165,7 @@ const showForm = (str) => {
 
   if (chatContainer.style.height == "0px" || chatContainer.style.height == 0) {
     chatContainer.style.height = "50vh";
-    chatContainer.style.border = "1px solid #7FC1E3";
+    // chatContainer.style.border = "1px solid #7FC1E3";
     chatBtn.style.display = "none";
   } else {
     chatContainer.style.height = "0px";
@@ -174,6 +177,24 @@ const showForm = (str) => {
 chatBtn.addEventListener("click", () => {
   console.log("sho form inside chatBtn event")
   showForm();
+})
+
+sendBtn.addEventListener("click", () => {
+  let msg = sendMsgTxtArea.value;
+  if (msg.trim() == "") {
+    return;
+  }
+  let msgEl = `
+  <div class="message message-me">
+        <div class="message-text">
+          ${msg}
+        </div>
+      </div>
+  `;
+  
+  messagesContainer.innerHTML += msgEl;
+  sendMsgTxtArea.value = "";
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
 })
 
 window.addEventListener("click", (e) => {
